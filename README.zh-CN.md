@@ -6,7 +6,7 @@
 [![node >= 18.17](https://img.shields.io/badge/node-%3E%3D18.17-green.svg)](package.json)
 [![运行时依赖: 0](https://img.shields.io/badge/runtime%20dependencies-0-green.svg)](package.json)
 
-**录制并回放任意 LLM API —— 支持任何语言，保留流式 chunk 的时间轴。**
+**录制并回放任意 LLM API —— 保留流式 chunk 的时间轴。**
 
 `llm-vcr` 是一个本地 HTTP 代理。把 SDK 的 base URL 指向它一次即可：首次运行会把真实的模型响应录制为可读的 JSON cassette（录制文件）；之后每次回放都离线、确定、零成本 —— 包括 SSE chunk 之间的时间间隔。
 
