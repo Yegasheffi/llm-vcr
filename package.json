@@ -1,0 +1,68 @@
+{
+  "name": "llm-vcr-proxy",
+  "version": "0.1.0",
+  "description": "Language-agnostic record & replay proxy for LLM APIs, including streaming chunk timing.",
+  "type": "module",
+  "bin": {
+    "llm-vcr": "./bin/llm-vcr.js"
+  },
+  "main": "./src/index.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./src/index.js"
+    }
+  },
+  "files": [
+    "bin",
+    "src",
+    "types",
+    "docs",
+    "examples/fake-openai.mjs",
+    "examples/demo.mjs",
+    "examples/python_client.py",
+    "README.md",
+    "LICENSE",
+    "README.zh-CN.md",
+    "demo",
+    "CHANGELOG.md",
+    "SECURITY.md"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "test": "node --test test/run.js",
+    "typecheck": "tsc -p tsconfig.json",
+    "demo": "node examples/demo.mjs",
+    "prepublishOnly": "npm test && npm run typecheck"
+  },
+  "keywords": [
+    "llm",
+    "vcr",
+    "record",
+    "replay",
+    "cassette",
+    "proxy",
+    "testing",
+    "ci",
+    "openai",
+    "anthropic",
+    "sse",
+    "streaming",
+    "mocking"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "openai": "6.9.1",
+    "typescript": "5.9.3"
+  },
+  "packageManager": "pnpm@11.7.0",
+  "homepage": "https://www.npmjs.com/package/llm-vcr-proxy",
+  "author": "llm-vcr contributors",
+  "publishConfig": {
+    "access": "public"
+  }
+}
